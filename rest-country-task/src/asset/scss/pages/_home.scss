@@ -1,0 +1,23 @@
+.home {
+	.card-no-data {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.card__body {
+			h1 {
+				font-size: 45px;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.home {
+		padding-left: 24px;
+		padding-right: 24px;
+
+		.form__search {
+			margin-bottom: 30px;
+		}
+	}
+}

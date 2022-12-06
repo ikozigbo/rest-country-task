@@ -1,0 +1,115 @@
+.dark-theme {
+	background: $dark-background;
+	color: $dark-text;
+
+	//navbar
+	.navbar {
+		background: $dark-element;
+		color: $dark-text;
+
+		button {
+			color: $dark-text;
+		}
+	}
+
+	//card
+	.card {
+		background: $dark-element;
+
+		&__body {
+			background: $dark-element;
+
+			h1 {
+				color: $dark-text;
+			}
+			p {
+				color: $dark-text;
+			}
+		}
+	}
+
+	.card.skeleton {
+		.card__img {
+			background-color: $dark-element;
+		}
+		.card__title {
+			@include skeleton-card-dark;
+		}
+		.card__text {
+			@include skeleton-card-dark;
+		}
+	}
+
+	//form
+	.form {
+		&__search {
+			background: $dark-element;
+
+			ion-icon {
+				color: $dark-text;
+			}
+			input {
+				color: $dark-text;
+
+				&::placeholder {
+					color: $dark-text;
+				}
+			}
+		}
+		&__search.skeleton {
+			@include skeleton-dark;
+		}
+		&__select-wrapper {
+			position: relative;
+
+			&::after {
+				content: url("../../img/arrow-down-light.svg");
+			}
+			select {
+				background: $dark-element;
+				color: $dark-text;
+			}
+		}
+		&__select-wrapper.skeleton {
+			@include skeleton-dark;
+		}
+	}
+
+	//badge
+	.badge {
+		background-color: $dark-element;
+		color: $dark-text;
+	}
+
+	//button
+	.btn {
+		background-color: $dark-element;
+		color: $dark-text;
+
+		&.skeleton {
+			color: transparent;
+
+			@include skeleton-dark;
+		}
+	}
+
+	//page detail
+	.detail {
+		.item__image.skeleton {
+			cursor: default;
+			@include skeleton-dark;
+
+			img {
+				visibility: hidden;
+			}
+		}
+		h1.skeleton {
+			cursor: default;
+			@include skeleton-dark;
+		}
+		p.skeleton {
+			cursor: default;
+			@include skeleton-dark;
+		}
+	}
+}

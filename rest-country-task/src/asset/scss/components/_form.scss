@@ -1,0 +1,99 @@
+.form {
+	display: flex;
+	margin-bottom: 33px;
+	align-items: center;
+	justify-content: space-between;
+
+	&__search {
+		display: flex;
+		align-items: center;
+		box-shadow: $box-shadow;
+		width: 480px;
+		padding: 0 32px;
+		border-radius: 8px;
+
+		ion-icon {
+			font-size: 18px;
+			margin-right: 24px;
+		}
+		input {
+			border: none;
+			outline: none;
+			padding: 18px 0;
+			width: 100%;
+			font-weight: 600;
+			font-size: 14px;
+			letter-spacing: -0.01em;
+			background-color: transparent;
+		}
+	}
+	&__search.skeleton {
+		color: transparent;
+		position: relative;
+		overflow: hidden;
+		border-radius: 0;
+
+		ion-icon {
+			color: transparent !important;
+		}
+		input {
+			color: transparent !important;
+
+			&::placeholder {
+				color: transparent !important;
+			}
+		}
+		&::after {
+			@include skeleton;
+			margin: 0 -32px;
+		}
+	}
+	&__select-wrapper {
+		position: relative;
+
+		&::after {
+			content: url("../../img/arrow-down-dark.svg");
+			top: 17px;
+			right: 21px;
+			position: absolute;
+		}
+		select {
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			outline: none;
+			box-shadow: $box-shadow;
+			font-weight: 600;
+			font-size: 14px;
+			letter-spacing: -0.01em;
+			width: 200px;
+			padding: 18px 19px;
+			border-radius: 8px;
+		}
+	}
+	&__select-wrapper.skeleton {
+		color: transparent !important;
+		position: relative;
+		overflow: hidden;
+		border-radius: 0;
+
+		&::after {
+			@include skeleton;
+			top: 0;
+			right: 0;
+		}
+		select {
+			color: transparent !important;
+			background-color: transparent !important;
+		}
+	}
+}
+
+@keyframes gradient-animation {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
